@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+*{
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+$blue-100: hsl(210, 46%, 95%);
+$blue-200: hsl(212, 23%, 69%);
+$blue-300: hsl(214, 17%, 51%);
+$blue-400: hsl(217, 19%, 35%);
+
+body{
+    font-size: 13px;
+}
+
+h1,h2,h3{
+    color: $blue-400;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+p{
+    color: $blue-200;
+}
+svg{
+    cursor: pointer;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100%;
+        
+        .card{
+            width: 80%;
+            background-color: $blue-100;
+            border-radius: 0.6rem;
+            -webkit-box-shadow: 0px 20px 70px -45px rgba(71, 95, 107, 1);
+            -moz-box-shadow: 0px 20px 70px -45px rgba(71, 95, 107, 1);
+            box-shadow: 0px 20px 70px -45px rgba(71, 95, 107, 1);
+            .card-image{
+                padding-bottom: 0.5rem;
+                background-image: url(./images/drawers.jpg);
+                border-radius: 0.6rem 0.6rem 0 0;
+                height: 12.5rem;
+                background-size: cover;
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                h1,p{
+                    max-width: 80%;
+                    padding-top: 1rem;
+                }
+                .content-share{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 80%;
+                    padding: 1.5rem 0 1.5rem 0;
+                    .content-share-left{
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        img{
+                            border-radius: 50%;
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                        .about{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: center;
+                            
+                            h2,p{
+                                padding-top: 0rem;
+                            }
+                        }
+                    }
+                    .content-share-right{
+                        border-radius: 50%;
+                        width: 1.9rem;
+                        height: 1.9rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                }
+                .share-active{
+                    background-color: $blue-400;
+                    margin-top: 1.5rem;
+                    width: 100%;
+                    border-radius: 0 0 0.6rem 0.6rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem 0 1.3rem 0;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 0rem;
+                    left: 0;
+                    .share-active-content{
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .share-active-left{
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            p{
+                                padding: 0;
+                                letter-spacing: 0.3rem;
+                                text-transform: uppercase;
+                                user-select: none;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+.svg{
+    background-color: $blue-300;
+    border-radius: 50%;
+    width: 1.9rem;
+    height: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg path{
+        fill: $blue-100;
+    }
+}
+
+
+@media (max-width: 350px){
+    .share-active-left {
+        gap: 0.3rem !important;
+        padding: 1rem 0 1.5rem 0 !important;
+    }
+}
+
+@media (min-width: 940px) {
+
+    main{
+        .container{
+            height: 100%;
+            .card{
+                display: flex;
+
+                width: 60%;
+                .card-image{
+                    padding: 0;
+                    border-radius: 0.6rem 0 0 0.6rem;
+                    width: 70%;
+                    background-repeat: no-repeat;
+                    height: auto;
+                    background-size: cover;
+                }
+                .content{
+                    width: 100%;
+                    gap: 0.5rem;
+                    h1{
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                    .content-share-right{
+                        position: relative;
+                        .share-active{
+                            position: absolute;
+                            top: -7rem;
+                            width: 225px;
+                            border-radius: 0.6rem;
+                            bottom: auto;
+                            left: auto;
+                            .mobile-btn{
+                                display: none;
+                            }
+                        }
+                        .share-active::before{
+                            content: '';
+                            position: absolute;
+                            top: 3rem;
+                            border: 20px solid transparent; 
+                            border-top: 20px solid $blue-400;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+

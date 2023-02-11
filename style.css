@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 13px;
+}
+
+h1, h2, h3 {
+  color: hsl(217deg, 19%, 35%);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+p {
+  color: hsl(212deg, 23%, 69%);
+}
+
+svg {
+  cursor: pointer;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+}
+main .container .card {
+  width: 80%;
+  background-color: hsl(210deg, 46%, 95%);
+  border-radius: 0.6rem;
+  box-shadow: 0px 20px 70px -45px rgb(71, 95, 107);
+}
+main .container .card .card-image {
+  padding-bottom: 0.5rem;
+  background-image: url(./images/drawers.jpg);
+  border-radius: 0.6rem 0.6rem 0 0;
+  height: 12.5rem;
+  background-size: cover;
+}
+main .container .card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .container .card .content h1, main .container .card .content p {
+  max-width: 80%;
+  padding-top: 1rem;
+}
+main .container .card .content .content-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 1.5rem 0 1.5rem 0;
+}
+main .container .card .content .content-share .content-share-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main .container .card .content .content-share .content-share-left img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+main .container .card .content .content-share .content-share-left .about {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+main .container .card .content .content-share .content-share-left .about h2, main .container .card .content .content-share .content-share-left .about p {
+  padding-top: 0rem;
+}
+main .container .card .content .content-share .content-share-right {
+  border-radius: 50%;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main .container .card .content .share-active {
+  background-color: hsl(217deg, 19%, 35%);
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 0 0 0.6rem 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0 1.3rem 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+}
+main .container .card .content .share-active .share-active-content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .container .card .content .share-active .share-active-content .share-active-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .container .card .content .share-active .share-active-content .share-active-left p {
+  padding: 0;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.svg {
+  background-color: hsl(214deg, 17%, 51%);
+  border-radius: 50%;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svg svg path {
+  fill: hsl(210deg, 46%, 95%);
+}
+
+@media (max-width: 350px) {
+  .share-active-left {
+    gap: 0.3rem !important;
+    padding: 1rem 0 1.5rem 0 !important;
+  }
+}
+@media (min-width: 940px) {
+  main .container {
+    height: 100%;
+  }
+  main .container .card {
+    display: flex;
+    width: 60%;
+  }
+  main .container .card .card-image {
+    padding: 0;
+    border-radius: 0.6rem 0 0 0.6rem;
+    width: 70%;
+    background-repeat: no-repeat;
+    height: auto;
+    background-size: cover;
+  }
+  main .container .card .content {
+    width: 100%;
+    gap: 0.5rem;
+  }
+  main .container .card .content h1 {
+    font-size: 22px;
+  }
+  main .container .card .content p {
+    font-size: 15px;
+  }
+  main .container .card .content .content-share-right {
+    position: relative;
+  }
+  main .container .card .content .content-share-right .share-active {
+    position: absolute;
+    top: -7rem;
+    width: 225px;
+    border-radius: 0.6rem;
+    bottom: auto;
+    left: auto;
+  }
+  main .container .card .content .content-share-right .share-active .mobile-btn {
+    display: none;
+  }
+  main .container .card .content .content-share-right .share-active::before {
+    content: "";
+    position: absolute;
+    top: 3rem;
+    border: 20px solid transparent;
+    border-top: 20px solid hsl(217deg, 19%, 35%);
+  }
+}/*# sourceMappingURL=style.css.map */
